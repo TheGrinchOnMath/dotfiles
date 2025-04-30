@@ -1,4 +1,4 @@
-### Variables
+# Variables
 
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
@@ -22,6 +22,24 @@ gaps outer 4
 # these two lines removes the titlebar
 default_border pixel 2
 default_floating_border pixel 2
+
+#SwayFX Settings
+blur enable
+blur_xray disable
+blur_passes 2
+blur_radius 10
+blur_brightness 1
+
+shadows disable
+corner_radius 10
+
+shadow_blur_radius 10
+
+default_dim_inactive 0.2
+dim_inactive_colors.unfocused #00000000
+dim_inactive_colors.urgent    #00000000
+titlebar_separator enable
+
 
 # when using swaybg to specify background
 # exec swaybg -i "/home/gronk/Pictures/wallpapers/post-apocalyptic-japan.jpg" -m "fill"
