@@ -8,6 +8,7 @@ return { -- Highlight, edit, and navigate code
       'go',
       'bash',
       'c',
+      'cpp',
       'diff',
       'html',
       'lua',

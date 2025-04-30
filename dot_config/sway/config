@@ -29,6 +29,7 @@ exec $term
 exec firefox
 # exec codium
 exec vesktop
+exec flatpak run org.telegram.desktop
 
 set $opacity 0.96
 for_window [class=".*"] opacity $opacity
