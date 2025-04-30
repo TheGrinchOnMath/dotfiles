@@ -16,8 +16,8 @@ bindsym $mod+d exec $menu
 ### Output configuration
 output eDP-1 resolution 1920x1080 scale 1 bg /home/gronk/Pictures/wallpapers/post-apocalyptic-japan.jpg fill
 #
-gaps inner 4
-gaps outer 4
+# gaps inner 4
+# gaps outer 4
 
 # these two lines removes the titlebar
 default_border pixel 2
@@ -27,18 +27,17 @@ default_floating_border pixel 2
 blur enable
 blur_xray disable
 blur_passes 2
-blur_radius 10
+blur_radius 3
 blur_brightness 1
-
+corner_radius 0
 shadows disable
-corner_radius 10
 
-shadow_blur_radius 10
 
 default_dim_inactive 0.2
 dim_inactive_colors.unfocused #00000000
 dim_inactive_colors.urgent    #00000000
-titlebar_separator enable
+titlebar_separator disable
+scratchpad_minimize disable
 
 
 # when using swaybg to specify background
