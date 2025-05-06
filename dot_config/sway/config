@@ -70,11 +70,11 @@ for_window [app_id="firefox" title="^\[games\].*"] move window to workspace 6
 for_window [app_id="firefox" title="^\[reading\].*"] move window to workspace 7 
 
 # move vesktop, telegram to workspace 5
-for_window[instance="vesktop"] move window to workspace 5
-for_window[app_id="org.telegram.desktop"] move window to workspace 5
+for_window [instance="vesktop"] move window to workspace 5
+for_window [app_id="org\.telegram\.desktop"] move window to workspace 5
 
 # move steam to workspace 6
-for_window[instance="steamwebhelper"] move window to workspace 6
+for_window [instance="steam*"] move window to workspace 6
 
 # ----------------------------------------------------------------- #
 
