@@ -22,9 +22,41 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- import all plugins
 
-  { import = 'plugins' },
+  -- import all plugins --
+  require 'plugins.alpha',
+  require 'plugins.autopairs',
+  require 'plugins.cmp',
+  -- require 'plugins.go',
+  require 'plugins.mini',
+  require 'plugins.neogit',
+  require 'plugins.neo-tree',
+  require 'plugins.lualine',
+  require 'plugins.debug',
+  require 'plugins.chezmoi',
+  -- require 'plugins.clangd_extensions',
+  require 'plugins.cmp',
+  require 'plugins.comment',
+  require 'plugins.gitsigns',
+  require 'plugins.gruvbox',
+  require 'plugins.indent_line',
+  require 'plugins.lazydev',
+  require 'plugins.markdown-preview',
+  require 'plugins.neominimap',
+  -- use when working with hex code colors
+  -- require 'plugins.nvim-colorizer',
+  require 'plugins.nvim-jqx',
+  require 'plugins.nvim-lspconfig',
+  require 'plugins.nvim-treesitter',
+  require 'plugins.nvim-ufo',
+  -- enables f-string toggle, useless for now ig?
+  -- require 'plugins.python-f-string-toggle',
+  require 'plugins.telescope',
+  require 'plugins.which-key',
+  require 'plugins.todo-comments',
+
+  -- imports all plugins
+  -- { import = 'plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
