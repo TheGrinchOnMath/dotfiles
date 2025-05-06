@@ -50,6 +50,32 @@ exec firefox
 # exec codium
 exec vesktop
 exec flatpak run org.telegram.desktop
+# ---------------------------------------- #
+
+
+# --- automatically send windows to their designated workspaces --- #
+# main window
+for_window [app_id="firefox" title="^\[main\].*"] move window to workspace 1
+# research projects
+for_window [app_id="firefox" title="^\[research\].*"] move window to workspace 2
+# programming-related stuff
+for_window [app_id="firefox" title="^\[code\].*"] move window to workspace 3
+# whatsapp, outlook, calendar etc
+for_window [app_id="firefox" title="^\[comms\].*"] move window to workspace 5
+# games, steam
+for_window [app_id="firefox" title="^\[games\].*"] move window to workspace 6
+# manga, other forms of reading
+for_window [app_id="firefox" title="^\[reading\].*"] move window to workspace 7 
+
+# move vesktop, telegram to workspace 5
+for_window[instance="vesktop"] move window to workspace 5
+for_window[app_id="org.telegram.desktop"] move window to workspace 5
+
+# move steam to workspace 6
+for_window[instance="steamwebhelper"] move window to workspace 6
+
+# ----------------------------------------------------------------- #
+
 
 # set the opacity as a variable, then set every variable to that opacity
 set $opacity 0.96
@@ -62,11 +88,11 @@ exec swayidle -w \
         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
         before-sleep 'swaylock -f -c 000000 -l -i "/home/gronk/Pictures/wallpapers/post-apocalyptic-deer.jpg"'
 
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+# This will lock the screen after 300 seconds of inactivity, then turn off
+# all displays after another 300 seconds, and turn them screens back on when
+# resumed. It will also lock the screen before the computer goes to sleep.
 
-### Input configuration
+# --- Input configuration --- #
 
    input "2:14:SynPS/2_Synaptics_TouchPad" {
        dwt enabled
@@ -84,12 +110,14 @@ exec swayidle -w \
    input type:mouse {
       natural_scroll enabled
    }
-#
+
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
     input type:keyboard {
         xkb_layout us(alt-intl)
     }
+
+# --------------------------- #
 
 # font configuration
 # font pango: Inconsolata 12
@@ -98,8 +126,8 @@ exec swayidle -w \
 # drag floating windows to their wanted position
 floating_modifier $mod
 
-### Key bindings
-#
+# --- Key bindings --- #
+
 # Custom key bindings
     # launch a new firefox window
     bindsym $mod+b exec firefox
@@ -107,6 +135,9 @@ floating_modifier $mod
     # color picker
     bindsym $mod+Shift+p exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy 
 
+    # screenshot
+    bindsym Print exec grim -g "$(slurp -d)" - | wl-copy
+      
     # lock screen
     bindsym Alt+L exec swaylock -f -c 000000 -l -i "/home/gronk/Pictures/wallpapers/post-apocalyptic-deer.jpg"
     
@@ -258,6 +289,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# ------------------------------ #
+
 #
 # Status Bar:
 #
@@ -276,16 +309,9 @@ bar {
         inactive_workspace #32323200 #32323200 #5c5c5c
     }
 }
-# colors
+# --- colors --- #
 
 # class			 border  backgr. text    indicator child_border
-
-#client.focused           #3c3836 #7c6f64 #1d2021 #3c3836   #3c3836
-#client.focused_inactive  #282828 #282828 #ddc7a1 #282828   #282828
-#client.unfocused	 #282828 #282828 #ddc7a1 #282828   #282828
-#client.urgent		 #d8a657 #d8a657 #1d2021 #d8a657   #d8a657
-#client.placeholder	 #7daea3 #7daea3 #1d2021 #7daea3   #7daea3
-
 
 client.focused		 #ebdbb2 #f9f5d7 #1d2021
 client.focused_inactive	 #d5c4a1 #ebddb2 #1d2021
@@ -294,11 +320,5 @@ client.urgent		 #cc241d #cc241d #f9f5d7
 client.placeholder	 #83a598 #83a598 #fe8019 
 
 default_border none
-
-# first hex is main color 2nd idk 3rd text color
-#client.unfocused #4d4d4d #333333 #ffffff
-#client.focused_inactive #333333 #000000 #ffffff
-#client.focused #222222 #111111 #ffffff
-#client.urgent #ff0000 #e60000 #ffffff
 
 include /etc/sway/config.d/*
