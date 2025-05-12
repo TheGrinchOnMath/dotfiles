@@ -30,3 +30,6 @@ fastfetch
 . "$HOME/.cargo/env"
 
 [[ -s "/home/gronk/.gvm/scripts/gvm" ]] && source "/home/gronk/.gvm/scripts/gvm"
+
+alias nvim-dev="XDG_CONFIG_HOME=~/nvim_config_dev/ XDG_DATA_HOME=~/.local/share/nvim_config_dev XDG_STATE_HOME=~/.local/state/nvim_config_dev nvim"
+alias cl="clear"

@@ -58,6 +58,7 @@ exec flatpak run org.telegram.desktop
 for_window [app_id="firefox" title="^\[main\].*"] move window to workspace 1
 # research projects
 for_window [app_id="firefox" title="^\[research\].*"] move window to workspace 2
+for_window [app_id="firefox" title="^\[projects\].*"] move window to workspace 2
 # programming-related stuff
 for_window [app_id="firefox" title="^\[code\].*"] move window to workspace 3
 # EPFL Stuff
