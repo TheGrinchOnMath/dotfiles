@@ -68,4 +68,4 @@ vim.opt.confirm = true
 -- if I want a different indent size, add a file in $nvim-config/after/ftplugin/
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.opt.expandtab = false
