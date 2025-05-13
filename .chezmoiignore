@@ -1,0 +1,5 @@
+
+# ignore lockfiles, no point in tracking them as they change all the time
+*.lock
+# this should avoid lazy-lock.json being tracked
+*lock.json
