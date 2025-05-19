@@ -5,7 +5,7 @@ return { -- Autocompletion
   opts = function(_, opts)
     opts.sorting = opts.sorting or {}
     opts.sorting.comparators = opts.sorting.comparators or {}
-    table.insert(opts.sorting.comparators, 1, require 'clangd_extensions.cmp_scores')
+    -- table.insert(opts.sorting.comparators, 1, require 'clangd_extensions.cmp_scores')
   end,
   dependencies = {
     -- Snippet Engine & its associated nvim-cmp source
@@ -118,6 +118,18 @@ return { -- Autocompletion
         { name = 'path' },
         { name = 'nvim_lsp_signature_help' },
       },
+    --   sorting = {
+    --     comparators = {
+    --         cmp.config.compare.offset,
+    --         cmp.config.compare.exact,
+    --         cmp.config.compare.recently_used,
+    --         require("clangd_extensions.cmp_scores"),
+    --         cmp.config.compare.kind,
+    --         cmp.config.compare.sort_text,
+    --         cmp.config.compare.length,
+    --         cmp.config.compare.order,
+    --     },
+    -- },
     }
   end,
 }
