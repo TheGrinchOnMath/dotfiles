@@ -1,0 +1,9 @@
+# ignore lockfiles
+**/lazy-lock.json
+*lock.json
+*.lock
+# ignore .git directories, no need to sync those
+.git/*
+
+# ignore build dirs
+**/target/*
