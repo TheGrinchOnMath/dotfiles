@@ -2,6 +2,7 @@ ImageMagick
 NetworkManager
 NetworkManager-bluetooth
 network-manager-applet
+age
 akmods
 akmod-nvidia
 alacritty
@@ -196,6 +197,7 @@ traceroute
 tree
 tree-sitter-cli
 tree-sitter-srpm-macros
+vimdiff
 valgrind
 waybar
 wayland-devel

@@ -48,7 +48,7 @@ exec nm-applet
 exec $term
 exec firefox
 # exec codium
-exec vesktop
+exec discord
 exec flatpak run org.telegram.desktop
 # ---------------------------------------- #
 
@@ -70,8 +70,8 @@ for_window [app_id="firefox" title="^\[games\].*"] move window to workspace 6
 # manga, other forms of reading
 for_window [app_id="firefox" title="^\[reading\].*"] move window to workspace 7 
 
-# move vesktop, telegram to workspace 5
-for_window [instance="vesktop"] move window to workspace 5
+# move discord, telegram to workspace 5
+for_window [instance="discord"] move window to workspace 5
 for_window [app_id="org\.telegram\.desktop"] move window to workspace 5
 
 # move steam to workspace 6

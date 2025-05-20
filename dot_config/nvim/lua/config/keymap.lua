@@ -39,8 +39,8 @@ vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
 vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
--- remove the stupid s remap thing
--- vim.keymap.set('x', 's', "<Nop>")
--- vim.keymap.set('x', 'S', "<Nop>")
--- vim.keymap.set('n', 'S', "<Nop>")
--- vim.keymap.set('n', 'S', "<Nop>")
+
+-- Unbind the default s binds (<s> -> <cl>, <S> -> cc)
+vim.keymap.set({ 'n', 'x' }, 's', '<Nop>')
+vim.keymap.set({ 'n', 'x' }, 'S', '<Nop>')
+
