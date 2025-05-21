@@ -50,6 +50,7 @@ exec firefox
 # exec codium
 exec discord
 exec flatpak run org.telegram.desktop
+exec lxpolkit
 # ---------------------------------------- #
 
 

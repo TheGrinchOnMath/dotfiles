@@ -97,6 +97,7 @@ less
 lm_sensors
 lua-libs
 lua5
+lxqt-policykit
 make
 man-db
 man-pages
