@@ -69,6 +69,96 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
+-- if vim.g.vscode then
+--   require('lazy').setup({
+--     require 'plugins.autopairs',
+--     require 'plugins.conform',
+--     require 'plugins.mini',
+--
+--     require 'plugins.todo-comments',
+--     require 'plugins.gruvbox',
+--     require 'plugins.which-key',
+--     require 'plugins.gitsigns',
+--     require 'plugins.comment',
+--   }, {
+--     ui = {
+--       -- If you are using a Nerd Font: set icons to an empty table which will use the
+--       -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
+--       icons = vim.g.have_nerd_font and {} or {
+--         cmd = '⌘',
+--         config = '🛠',
+--         event = '📅',
+--         ft = '📂',
+--         init = '⚙',
+--         keys = '🗝',
+--         plugin = '🔌',
+--         runtime = '💻',
+--         require = '🌙',
+--         source = '📄',
+--         start = '🚀',
+--         task = '📌',
+--         lazy = '💤 ',
+--       },
+--     },
+--   })
+-- else
+--   -- no vscode support for now
+--   -- [[ Lazy Plugin Manager ]]
+--   require('lazy').setup({
+--     -- import all plugins --
+--     require 'plugins.alpha',
+--     require 'plugins.autopairs',
+--     -- require("plugins.cmp"),
+--     require 'plugins.blink',
+--     require 'plugins.conform',
+--     -- require 'plugins.go',
+--     require 'plugins.mini',
+--     require 'plugins.neogit',
+--     require 'plugins.neo-tree',
+--     require 'plugins.lualine',
+--     require 'plugins.debug',
+--     require 'plugins.chezmoi',
+--     -- require 'plugins.clangd_extensions',
+--     require 'plugins.comment',
+--     require 'plugins.gitsigns',
+--     require 'plugins.gruvbox',
+--     require 'plugins.indent_line',
+--     require 'plugins.lazydev',
+--     require 'plugins.markdown-preview',
+--     require 'plugins.neominimap',
+--     -- use when working with hex code colors
+--     -- require 'plugins.nvim-colorizer',
+--     require 'plugins.nvim-jqx',
+--     require 'plugins.nvim-lspconfig',
+--     require 'plugins.nvim-treesitter',
+--     require 'plugins.nvim-ufo',
+--     require 'plugins.ft-python.f-string-toggle',
+--     require 'plugins.telescope',
+--     require 'plugins.which-key',
+--     require 'plugins.todo-comments',
+--   }, {
+--     ui = {
+--       -- If you are using a Nerd Font: set icons to an empty table which will use the
+--       -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
+--       icons = vim.g.have_nerd_font and {} or {
+--         cmd = '⌘',
+--         config = '🛠',
+--         event = '📅',
+--         ft = '📂',
+--         init = '⚙',
+--         keys = '🗝',
+--         plugin = '🔌',
+--         runtime = '💻',
+--         require = '🌙',
+--         source = '📄',
+--         start = '🚀',
+--         task = '📌',
+--         lazy = '💤 ',
+--       },
+--     },
+--   })
+-- end
+
 -- no vscode support for now
 -- [[ Lazy Plugin Manager ]]
 require('lazy').setup({

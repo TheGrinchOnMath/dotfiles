@@ -47,7 +47,7 @@ scratchpad_minimize disable
 exec nm-applet
 exec $term
 exec firefox
-# exec codium
+exec flatpak run eu.betterbird.Betterbird
 exec discord
 exec flatpak run org.telegram.desktop
 exec lxpolkit
@@ -66,6 +66,8 @@ for_window [app_id="firefox" title="^\[code\].*"] move window to workspace 3
 for_window [app_id="firefox" title="^\[school\].*"] move window to workspace 4
 # whatsapp, outlook, calendar etc
 for_window [app_id="firefox" title="^\[comms\].*"] move window to workspace 5
+
+for_window [app_id="firefox" title="^\[comms\].*"] move window to workspace 5
 # games, steam
 for_window [app_id="firefox" title="^\[games\].*"] move window to workspace 6
 # manga, other forms of reading
@@ -74,6 +76,7 @@ for_window [app_id="firefox" title="^\[reading\].*"] move window to workspace 7
 # move discord, telegram to workspace 5
 for_window [instance="discord"] move window to workspace 5
 for_window [app_id="org\.telegram\.desktop"] move window to workspace 5
+for_window [app_id="eu.betterbird.Betterbird"] move window to workspace 5
 
 # move steam to workspace 6
 for_window [instance="steam*"] move window to workspace 6
