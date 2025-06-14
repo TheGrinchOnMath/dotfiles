@@ -35,3 +35,5 @@ alias ll="ls -al"
 alias nvim-dev="XDG_CONFIG_HOME=~/nvim_config_dev/ XDG_DATA_HOME=~/.local/share/nvim_config_dev XDG_STATE_HOME=~/.local/state/nvim_config_dev nvim"
 alias cl="clear"
 alias vim="nvim"
+
+export PATH=$PATH:/home/gronk/.spicetify

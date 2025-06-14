@@ -56,6 +56,8 @@ if vim.g.vscode then
   })
 else
   require('lazy').setup({
+    -- try getting this one plugin to work FIXME
+    require 'plugins.copilot',
 
     -- import all plugins --
     require 'plugins.alpha',
@@ -69,7 +71,7 @@ else
     require 'plugins.debug',
     require 'plugins.chezmoi',
     -- require 'plugins.clangd_extensions',
-    require 'plugins.cmp',
+    require 'plugins.blink',
     require 'plugins.comment',
     require 'plugins.gitsigns',
     require 'plugins.gruvbox',

@@ -42,6 +42,8 @@ require 'config.opt'
 --  See `:help vim.keymap.set()`
 require 'config.keymap'
 
+require 'config.lsp'
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
