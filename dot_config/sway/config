@@ -4,7 +4,7 @@
 set $mod Mod4
 
 # set terminal emulator
-set $term kitty
+set $term alacritty
 
 # application launcher
 set $menu "rofi -show combi -modes combi -combi-modes 'window,drun,run' | xargs swyamsg exec --"
