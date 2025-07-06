@@ -29,11 +29,13 @@ export  PS1="\[\e[0;1;94m\]┌──\[\e[0;1;94m\](\[\e[0;1;92m\]\u\[\e[0;1;94m\
 fastfetch
 . "$HOME/.cargo/env"
 
-[[ -s "/home/gronk/.gvm/scripts/gvm" ]] && source "/home/gronk/.gvm/scripts/gvm"
+# [[ -s "/home/gronk/.gvm/scripts/gvm" ]] && source "/home/gronk/.gvm/scripts/gvm"
 
 alias ll="ls -al"
-alias nvim-dev="XDG_CONFIG_HOME=~/nvim_config_dev/ XDG_DATA_HOME=~/.local/share/nvim_config_dev XDG_STATE_HOME=~/.local/state/nvim_config_dev nvim"
+alias nvim-dev="XDG_CONFIG_HOME=~/nvim_config_dev/ XDG_DATA_HOME=~/.local/share/nvim_config_dev XDG_STATE_HOME=~/.local/state/nvim_config_dev XDG_CACHE_HOME=~/.cache/nvim_config_dev nvim"
 alias cl="clear"
 alias vim="nvim"
+alias lazyvim="XDG_CONFIG_HOME=~/nvim_lazyvim/ XDG_DATA_HOME=~/.local/share/nvim_lazyvim XDG_STATE_HOME=~/.local/state/nvim_lazyvim XDG_CACHE_HOME=~/.cache/nvim_lazyvim nvim"
+
 
 export PATH=$PATH:/home/gronk/.spicetify

@@ -70,7 +70,7 @@ mods = "Command"
 # foreground = "#ebdbb2"
 #
 [env]
-term = "xterm-256color"
+# term = "xterm-256color"
 
 [font]
 size = 12.0

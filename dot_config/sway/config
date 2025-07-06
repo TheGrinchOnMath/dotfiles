@@ -4,7 +4,8 @@
 set $mod Mod4
 
 # set terminal emulator
-set $term alacritty
+# Alacritty does not have ligature support :(
+set $term kitty
 
 # application launcher
 set $menu "rofi -show combi -modes combi -combi-modes 'window,drun,run' | xargs swyamsg exec --"
@@ -48,7 +49,7 @@ exec nm-applet
 exec $term
 exec firefox
 exec flatpak run eu.betterbird.Betterbird
-exec discord
+exec dev.vencord.Vesktop
 exec flatpak run org.telegram.desktop
 exec lxpolkit
 # ---------------------------------------- #

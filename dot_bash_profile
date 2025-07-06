@@ -9,3 +9,4 @@ fi
 . "$HOME/.cargo/env"
 
 export PATH=$PATH:/home/gronk/.spicetify
+export XDG_CONFIG_HOME=/home/gronk/.config
