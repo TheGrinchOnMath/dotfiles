@@ -49,8 +49,8 @@ exec nm-applet
 exec $term
 exec firefox
 exec flatpak run eu.betterbird.Betterbird
-exec dev.vencord.Vesktop
-exec flatpak run org.telegram.desktop
+exec flatpak run dev.vencord.Vesktop
+# exec flatpak run org.telegram.desktop
 exec lxpolkit
 # ---------------------------------------- #
 
@@ -81,6 +81,10 @@ for_window [app_id="eu.betterbird.Betterbird"] move window to workspace 5
 
 # move steam to workspace 6
 for_window [instance="steam*"] move window to workspace 6
+
+
+for_window [app_id="ftb-app" title="Error"] kill
+
 
 # ----------------------------------------------------------------- #
 
